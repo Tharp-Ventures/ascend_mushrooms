@@ -19,6 +19,7 @@
     },
     "video_3MgKfy": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -74,6 +75,7 @@
         "row_WmDh89",
         "row_3i9JRd"
       ],
+      "disabled": true,
       "settings": {
         "image_height": "adapt",
         "desktop_image_width": "medium",
@@ -115,6 +117,7 @@
         "text_awR7Eb",
         "button_aADBVF"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -123,12 +126,118 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_lp_hero_rbNKrb": {
+      "type": "custom-lp-hero",
+      "name": "Custom LP Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Group_1000006373.png",
+        "content_position": 30,
+        "rating_text": "100+ of happy feet",
+        "heading": "reboot your life from the shoe up",
+        "description": "built on the principles that drove human evolution, fission.01 helps you move and feel like you were designed to.",
+        "button_text": "SHOP NOW",
+        "button_link": "",
+        "feature1_icon": "shopify://shop_images/drop-icon.png",
+        "feature1_title": "Zero Drop",
+        "feature1_text": "full-body strength & alignment",
+        "feature2_icon": "shopify://shop_images/wide-icon.png",
+        "feature2_title": "Wide toe box",
+        "feature2_text": "foot freedom, finally",
+        "feature3_icon": "shopify://shop_images/chimp-icon.png",
+        "feature3_title": "Maximum style",
+        "feature3_text": "minimal branding"
+      }
+    },
+    "lp_why_KTfiCc": {
+      "type": "lp-why",
+      "name": "Why Section",
+      "settings": {
+        "overlap_desktop": 300,
+        "overlap_tablet": 200,
+        "overlap_mobile": 150,
+        "heading": "most shoes are a mistake. and you are paying the price.",
+        "subheading": "HERE'S WHY",
+        "problem1_title": "Raised heels",
+        "problem1_icon": "shopify://shop_images/arrow-double.png",
+        "problem2_title": "Cushioned soles",
+        "problem2_icon": "shopify://shop_images/arrow-double.png",
+        "problem3_title": "Crushed toes",
+        "problem3_icon": "shopify://shop_images/arrow-double.png",
+        "result_text": "You were sold 'support' that made you weaker. The result? Knee pain. Poor posture. Weak muscles. Disconnection from your true self.",
+        "brand_statement": "Abstract Chimp isn't footwear. It's a rebellion. A return to evolutionary design.",
+        "video_mp4_url": "",
+        "video_cover_image": "shopify://shop_images/aa4aefc3-565c-40e2-8456-6572fe2aa10f.png",
+        "autoplay": true,
+        "loop": true,
+        "freedom_heading_line1": "FREEDOM STARTS",
+        "freedom_heading_line2": "AT THE SOLE",
+        "section_bg_color": "#f8f8f8"
+      }
+    },
+    "show_features_GbwNNQ": {
+      "type": "show-features",
+      "name": "Shoe Features",
+      "settings": {
+        "background_image": "shopify://shop_images/feat-bg.png",
+        "small_heading": "THIS IS",
+        "main_heading": "what shoes should have always been",
+        "description": "We stripped away everything your feet don't need. No heel drop. No arch interference. No toe prison. No obnoxious branding. Strong enough to train in, clean enough to wear out.",
+        "feature1_title": "Zero Drop Sole",
+        "feature1_text": "Restore posture + natural gait",
+        "feature2_title": "Wide Toe Box",
+        "feature2_text": "Let your toes splay, grip, and move freely",
+        "feature3_title": "Flexible Sole",
+        "feature3_text": "Feel the ground, strengthen every step",
+        "feature4_title": "Breathable Organic Materials",
+        "feature4_text": "Stay cool, light, and dry"
+      }
+    },
+    "shoe_comparison_rEV9X7": {
+      "type": "shoe-comparison",
+      "name": "Shoe Comparison",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading_text": "the difference is",
+        "heading_highlight": "night and day",
+        "heading_suffix": "with abstract chimp shoes",
+        "highlight_color": "#5E8E5A",
+        "left_label": "THEM",
+        "left_title": "TRADITIONAL SHOES",
+        "right_label": "US",
+        "right_title": "ABSTRACT CHIMP",
+        "comparison_image": "shopify://shop_images/vs2.png",
+        "compare1_left": "elevated heel",
+        "compare1_left_result": "misaligned posture",
+        "compare2_left": "arch support",
+        "compare2_left_result": "weakened feet",
+        "compare3_left": "narrow toe box",
+        "compare3_left_result": "foot deformity",
+        "compare4_left": "rigid sole",
+        "compare4_left_result": "no ground feedback",
+        "compare5_left": "heavy & restrictive",
+        "compare5_left_result": "limited movement",
+        "compare1_right": "zero drop",
+        "compare1_right_result": "natural alignment",
+        "compare2_right": "no arch support",
+        "compare2_right_result": "stronger muscles",
+        "compare3_right": "wide toe box",
+        "compare3_right_result": "happy, functional toes",
+        "compare4_right": "flexible minimal sole",
+        "compare4_right_result": "proprioception",
+        "compare5_right": "lightweight freedom",
+        "compare5_right_result": "natural movement"
+      }
     }
   },
   "order": [
     "main",
     "video_3MgKfy",
     "multirow_di9GFc",
-    "rich_text_774G4q"
+    "rich_text_774G4q",
+    "custom_lp_hero_rbNKrb",
+    "lp_why_KTfiCc",
+    "show_features_GbwNNQ",
+    "shoe_comparison_rEV9X7"
   ]
 }

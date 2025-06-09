@@ -8,7 +8,7 @@
         "type": "color",
         "id": "background_color",
         "label": "Background Color",
-        "default": "#ffffff"
+        "default": "#f8f8f8"
       },
       {
         "type": "text",
@@ -234,159 +234,134 @@
     color: {{ section.settings.highlight_color }};
   }
   
-  .comparison-layout {
-    position: relative;
-    max-width: 850px;
-    margin: 0 auto;
-  }
-  
-  .comparison-image-container {
-    text-align: center;
-    margin-bottom: 0;
-    position: relative;
-  }
-  
-  .comparison-main-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .comparison-labels {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-    padding: 0 20px;
-  }
-  
-  .label-column {
+  .comparison-main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   
-  .left-column {
-    padding-right: 100px;
+  .comparison-image-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 40px 0 30px;
+    position: relative;
   }
   
-  .right-column {
-    padding-left: 100px;
+  .comparison-image {
+    max-width: 600px;
+    width: 50%;
+    margin: 0 auto;
   }
   
-  .column-label {
+  .left-labels {
+    width: 25%;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+  
+  .right-labels {
+    width: 25%;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .label-text {
+    color: {{ section.settings.highlight_color }};
+    text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
-    color: {{ section.settings.highlight_color }};
     margin-bottom: 5px;
-    text-transform: uppercase;
   }
   
-  .column-title {
-    font-size: 20px;
+  .title-text {
+    font-size: 21px;
     font-weight: 700;
     color: #333;
     text-transform: uppercase;
-    text-align: center;
   }
   
-  .comparison-points {
+  .left-features,
+  .right-features {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
     position: relative;
-    margin-top: 30px;
   }
   
-  .points-left,
-  .points-right {
-    position: absolute;
-    top: 0;
-    width: 40%;
-  }
-  
-  .points-left {
-    left: 0;
-  }
-  
-  .points-right {
-    right: 0;
-  }
-  
-  .comparison-row {
+  .feature-row {
     display: flex;
-    margin-bottom: 15px;
     align-items: center;
+    margin-bottom: 20px;
+    position: relative;
   }
   
-  .points-left .comparison-row {
+  .left-feature-row {
+    padding-left: 5%;
+    padding-right: 55%;
+    justify-content: flex-start;
+  }
+  
+  .right-feature-row {
+    padding-right: 5%;
+    padding-left: 55%;
     justify-content: flex-end;
   }
   
-  .point-result {
-    font-size: 15px;
+  .feature-result {
+    font-size: 16px;
+    line-height: 1.2;
     color: #333;
-    line-height: 1.3;
   }
   
-  .points-left .point-result {
+  .left-feature-result {
     text-align: right;
     margin-right: 10px;
-    width: 130px;
+    width: 170px;
   }
   
-  .points-right .point-result {
+  .right-feature-result {
     text-align: left;
     margin-left: 10px;
-    width: 130px;
+    width: 170px;
   }
   
-  .point-line {
-    width: 80px;
+  .feature-line {
     height: 1px;
     background-color: #999;
     position: relative;
+    flex-grow: 1;
+    max-width: 100px;
   }
   
   .left-arrow {
-    position: absolute;
-    left: 0;
-    top: -3px;
-    width: 7px;
-    height: 7px;
-    border-top: 1px solid #999;
-    border-right: 1px solid #999;
-    transform: rotate(-135deg);
+    display: none;
   }
   
   .right-arrow {
-    position: absolute;
-    right: 0;
-    top: -3px;
-    width: 7px;
-    height: 7px;
-    border-top: 1px solid #999;
-    border-right: 1px solid #999;
-    transform: rotate(45deg);
+    display: none;
   }
   
-  .point-text {
-    font-size: 15px;
+  .feature-name {
+    font-size: 16px;
+    line-height: 1.2;
     color: #333;
-    line-height: 1.3;
   }
   
-  .points-left .point-text {
+  .left-feature-name {
     text-align: left;
     margin-left: 10px;
-    width: 130px;
+    width: 150px;
   }
   
-  .points-right .point-text {
+  .right-feature-name {
     text-align: right;
     margin-right: 10px;
-    width: 130px;
+    width: 150px;
   }
   
   @media screen and (max-width: 989px) {
@@ -394,22 +369,27 @@
       font-size: 32px;
     }
     
-    .left-column {
-      padding-right: 50px;
+    .left-feature-row {
+      padding-right: 50%;
     }
     
-    .right-column {
-      padding-left: 50px;
+    .right-feature-row {
+      padding-left: 50%;
     }
     
-    .point-result, 
-    .point-text {
-      font-size: 14px;
-      width: 120px;
+    .feature-result, 
+    .feature-name {
+      font-size: 15px;
     }
     
-    .point-line {
-      width: 60px;
+    .left-feature-result,
+    .right-feature-result {
+      width: 150px;
+    }
+    
+    .left-feature-name,
+    .right-feature-name {
+      width: 130px;
     }
   }
   
@@ -426,54 +406,42 @@
       font-size: 26px;
     }
     
-    .comparison-layout {
-      display: flex;
+    .comparison-image-row {
       flex-direction: column;
+      align-items: center;
     }
     
-    .comparison-labels {
-      position: relative;
-      margin-bottom: 20px;
-      padding: 0;
-    }
-    
-    .left-column,
-    .right-column {
-      padding: 0;
-    }
-    
-    .comparison-image-container {
-      order: 2;
-      margin-bottom: 30px;
-    }
-    
-    .comparison-points {
-      order: 3;
-      margin-top: 0;
-    }
-    
-    .points-left,
-    .points-right {
-      position: relative;
+    .left-labels,
+    .right-labels {
       width: 100%;
-      margin-bottom: 30px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 20px;
     }
     
-    .points-left .comparison-row,
-    .points-right .comparison-row {
-      justify-content: center;
+    .comparison-image {
+      width: 80%;
+      order: 3;
     }
     
-    .points-left .point-result,
-    .points-left .point-text,
-    .points-right .point-result,
-    .points-right .point-text {
-      width: 120px;
-      font-size: 13px;
+    .left-feature-row,
+    .right-feature-row {
+      padding: 0;
+      justify-content: space-between;
+      max-width: 350px;
+      margin: 0 auto;
     }
     
-    .point-line {
-      width: 40px;
+    .left-feature-result,
+    .right-feature-result,
+    .left-feature-name,
+    .right-feature-name {
+      width: 130px;
+      font-size: 14px;
+    }
+    
+    .feature-line {
+      max-width: 50px;
     }
   }
   </style>
@@ -487,92 +455,89 @@
         </h2>
       </div>
       
-      <div class="comparison-layout">
-        <div class="comparison-labels">
-          <div class="label-column left-column">
-            <div class="column-label">{{ section.settings.left_label }}</div>
-            <div class="column-title">{{ section.settings.left_title }}</div>
+      <div class="comparison-main">
+        <div class="comparison-image-row">
+          <div class="left-labels">
+            <div class="label-text">{{ section.settings.left_label }}</div>
+            <div class="title-text">{{ section.settings.left_title }}</div>
           </div>
           
-          <div class="label-column right-column">
-            <div class="column-label">{{ section.settings.right_label }}</div>
-            <div class="column-title">{{ section.settings.right_title }}</div>
+          <div class="comparison-image">
+            {% if section.settings.comparison_image %}
+              {{ section.settings.comparison_image | image_url: width: 800 | image_tag: 
+                loading: 'lazy',
+                alt: 'Shoe comparison'
+              }}
+            {% endif %}
+          </div>
+          
+          <div class="right-labels">
+            <div class="label-text">{{ section.settings.right_label }}</div>
+            <div class="title-text">{{ section.settings.right_title }}</div>
           </div>
         </div>
         
-        <div class="comparison-image-container">
-          {% if section.settings.comparison_image %}
-            {{ section.settings.comparison_image | image_url: width: 1000 | image_tag: 
-              class: 'comparison-main-image',
-              loading: 'lazy',
-              alt: 'Shoe comparison'
-            }}
-          {% endif %}
-        </div>
-        
-        <div class="comparison-points">
-          <div class="points-left">
-            <div class="comparison-row">
-              <div class="point-result">{{ section.settings.compare1_left_result }}</div>
-              <div class="point-line"><div class="left-arrow"></div></div>
-              <div class="point-text">{{ section.settings.compare1_left }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-result">{{ section.settings.compare2_left_result }}</div>
-              <div class="point-line"><div class="left-arrow"></div></div>
-              <div class="point-text">{{ section.settings.compare2_left }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-result">{{ section.settings.compare3_left_result }}</div>
-              <div class="point-line"><div class="left-arrow"></div></div>
-              <div class="point-text">{{ section.settings.compare3_left }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-result">{{ section.settings.compare4_left_result }}</div>
-              <div class="point-line"><div class="left-arrow"></div></div>
-              <div class="point-text">{{ section.settings.compare4_left }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-result">{% if section.settings.compare5_left_result != 'none' %}{{ section.settings.compare5_left_result }}{% endif %}</div>
-              <div class="point-line"><div class="left-arrow"></div></div>
-              <div class="point-text">{{ section.settings.compare5_left }}</div>
-            </div>
+        <div class="left-features">
+          <div class="feature-row left-feature-row">
+            <div class="feature-result left-feature-result">{{ section.settings.compare1_left_result }}</div>
+            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
+            <div class="feature-name left-feature-name">{{ section.settings.compare1_left }}</div>
           </div>
           
-          <div class="points-right">
-            <div class="comparison-row">
-              <div class="point-text">{{ section.settings.compare1_right }}</div>
-              <div class="point-line"><div class="right-arrow"></div></div>
-              <div class="point-result">{{ section.settings.compare1_right_result }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-text">{{ section.settings.compare2_right }}</div>
-              <div class="point-line"><div class="right-arrow"></div></div>
-              <div class="point-result">{{ section.settings.compare2_right_result }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-text">{{ section.settings.compare3_right }}</div>
-              <div class="point-line"><div class="right-arrow"></div></div>
-              <div class="point-result">{{ section.settings.compare3_right_result }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-text">{{ section.settings.compare4_right }}</div>
-              <div class="point-line"><div class="right-arrow"></div></div>
-              <div class="point-result">{{ section.settings.compare4_right_result }}</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="point-text">{{ section.settings.compare5_right }}</div>
-              <div class="point-line"><div class="right-arrow"></div></div>
-              <div class="point-result">{% if section.settings.compare5_right_result != 'none' %}{{ section.settings.compare5_right_result }}{% endif %}</div>
-            </div>
+          <div class="feature-row left-feature-row">
+            <div class="feature-result left-feature-result">{{ section.settings.compare2_left_result }}</div>
+            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
+            <div class="feature-name left-feature-name">{{ section.settings.compare2_left }}</div>
+          </div>
+          
+          <div class="feature-row left-feature-row">
+            <div class="feature-result left-feature-result">{{ section.settings.compare3_left_result }}</div>
+            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
+            <div class="feature-name left-feature-name">{{ section.settings.compare3_left }}</div>
+          </div>
+          
+          <div class="feature-row left-feature-row">
+            <div class="feature-result left-feature-result">{{ section.settings.compare4_left_result }}</div>
+            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
+            <div class="feature-name left-feature-name">{{ section.settings.compare4_left }}</div>
+          </div>
+          
+          <div class="feature-row left-feature-row">
+            <div class="feature-result left-feature-result">{% if section.settings.compare5_left_result != 'none' %}{{ section.settings.compare5_left_result }}{% endif %}</div>
+            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
+            <div class="feature-name left-feature-name">{{ section.settings.compare5_left }}</div>
+          </div>
+        </div>
+        
+        <div class="right-features">
+          <div class="feature-row right-feature-row">
+            <div class="feature-name right-feature-name">{{ section.settings.compare1_right }}</div>
+            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
+            <div class="feature-result right-feature-result">{{ section.settings.compare1_right_result }}</div>
+          </div>
+          
+          <div class="feature-row right-feature-row">
+            <div class="feature-name right-feature-name">{{ section.settings.compare2_right }}</div>
+            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
+            <div class="feature-result right-feature-result">{{ section.settings.compare2_right_result }}</div>
+          </div>
+          
+          <div class="feature-row right-feature-row">
+            <div class="feature-name right-feature-name">{{ section.settings.compare3_right }}</div>
+            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
+            <div class="feature-result right-feature-result">{{ section.settings.compare3_right_result }}</div>
+          </div>
+          
+          <div class="feature-row right-feature-row">
+            <div class="feature-name right-feature-name">{{ section.settings.compare4_right }}</div>
+            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
+            <div class="feature-result right-feature-result">{{ section.settings.compare4_right_result }}</div>
+          </div>
+          
+          <div class="feature-row right-feature-row">
+            <div class="feature-name right-feature-name">{{ section.settings.compare5_right }}</div>
+            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
+            <div class="feature-result right-feature-result">{% if section.settings.compare5_right_result != 'none' %}{{ section.settings.compare5_right_result }}{% endif %}</div>
           </div>
         </div>
       </div>
