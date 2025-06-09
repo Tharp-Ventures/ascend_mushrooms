@@ -1,0 +1,505 @@
+{% schema %}
+  {
+    "name": "Why Section",
+    "tag": "section",
+    "class": "section why-section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "overlap_desktop",
+        "min": 0,
+        "max": 500,
+        "step": 10,
+        "unit": "px",
+        "label": "Desktop overlap",
+        "default": 300
+      },
+      {
+        "type": "range",
+        "id": "overlap_tablet",
+        "min": 0,
+        "max": 350,
+        "step": 10,
+        "unit": "px",
+        "label": "Tablet overlap",
+        "default": 200
+      },
+      {
+        "type": "range",
+        "id": "overlap_mobile",
+        "min": 0,
+        "max": 250,
+        "step": 10,
+        "unit": "px",
+        "label": "Mobile overlap",
+        "default": 150
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "most shoes are a mistake. and you are paying the price."
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "HERE'S WHY"
+      },
+      {
+        "type": "header",
+        "content": "Problem 1"
+      },
+      {
+        "type": "text",
+        "id": "problem1_title",
+        "label": "Title",
+        "default": "Raised heels"
+      },
+      {
+        "type": "image_picker",
+        "id": "problem1_icon",
+        "label": "Icon"
+      },
+      {
+        "type": "header",
+        "content": "Problem 2"
+      },
+      {
+        "type": "text",
+        "id": "problem2_title",
+        "label": "Title",
+        "default": "Cushioned soles"
+      },
+      {
+        "type": "image_picker",
+        "id": "problem2_icon",
+        "label": "Icon"
+      },
+      {
+        "type": "header",
+        "content": "Problem 3"
+      },
+      {
+        "type": "text",
+        "id": "problem3_title",
+        "label": "Title",
+        "default": "Crushed toes"
+      },
+      {
+        "type": "image_picker",
+        "id": "problem3_icon",
+        "label": "Icon"
+      },
+      {
+        "type": "textarea",
+        "id": "result_text",
+        "label": "Result Text",
+        "default": "You were sold 'support' that made you weaker. The result? Knee pain. Poor posture. Weak muscles. Disconnection from your true self."
+      },
+      {
+        "type": "textarea",
+        "id": "brand_statement",
+        "label": "Brand Statement",
+        "default": "Abstract Chimp isn't footwear. It's a rebellion. A return to evolutionary design."
+      },
+      {
+        "type": "header",
+        "content": "Freedom Video"
+      },
+      {
+        "type": "video_url",
+        "id": "freedom_video",
+        "label": "Freedom Video",
+        "accept": ["youtube", "vimeo"],
+        "info": "YouTube or Vimeo URL"
+      },
+      {
+        "type": "url",
+        "id": "video_mp4_url",
+        "label": "Custom MP4 Video URL",
+        "info": "MP4 file URL (leave empty if using YouTube/Vimeo)"
+      },
+      {
+        "type": "image_picker",
+        "id": "video_cover_image",
+        "label": "Video Cover Image",
+        "info": "Shown until the video plays"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay video",
+        "default": true,
+        "info": "Video will be muted if autoplay is enabled"
+      },
+      {
+        "type": "checkbox",
+        "id": "loop",
+        "label": "Loop video",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "freedom_heading_line1",
+        "label": "Freedom Heading Line 1",
+        "default": "FREEDOM STARTS"
+      },
+      {
+        "type": "text",
+        "id": "freedom_heading_line2",
+        "label": "Freedom Heading Line 2",
+        "default": "AT THE SOLE"
+      },
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section Background Color",
+        "default": "#f8f8f8"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Why Section",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  <style>
+  .why-section {
+    background-color: {{ section.settings.section_bg_color | default: '#f8f8f8' }};
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    margin-top: -{{ section.settings.overlap_desktop }}px;
+  }
+  
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .why-heading {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 900;
+    color: #333;
+    margin: 0 auto 20px;
+    max-width: 900px;
+  }
+  
+  .why-subheading {
+    font-size: 24px;
+    color: #5E8E5A;
+    margin-bottom: 60px;
+    font-weight: 600;
+  }
+  
+  .problems-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .problem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+  }
+  
+  .problem-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .problem-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .result-text {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+  .brand-statement {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 80px;
+  }
+  
+  span.shipping-icon {
+    display: flex;
+  }
+  
+  .freedom-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .freedom-video-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .freedom-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .freedom-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .freedom-heading-line {
+    display: block;
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  
+  .video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .video-play-button svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  
+  .video-play-button:hover {
+    background-color: rgba(255,255,255,1);
+  }
+  
+  .video-embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-embed-container iframe,
+  .video-embed-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 989px) {
+    .why-section {
+      margin-top: -{{ section.settings.overlap_tablet }}px;
+    }
+    
+    .problems-container {
+      gap: 40px;
+    }
+    
+    .why-heading {
+      font-size: 36px;
+    }
+    
+    .freedom-heading-line {
+      font-size: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .why-section {
+      margin-top: -{{ section.settings.overlap_mobile }}px;
+      padding: 60px 0;
+    }
+    
+    .problems-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .why-heading {
+      font-size: 30px;
+    }
+    
+    .why-subheading {
+      margin-bottom: 40px;
+    }
+    
+    .result-text,
+    .brand-statement {
+      font-size: 18px;
+    }
+    
+    .freedom-heading-line {
+      font-size: 30px;
+    }
+    
+    .video-play-button {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .video-play-button svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  </style>
+  
+  <div class="why-section">
+    <div class="why-container">
+      <h2 class="why-heading">{{ section.settings.heading }}</h2>
+      <div class="why-subheading">{{ section.settings.subheading }}</div>
+      
+      <div class="problems-container">
+        <div class="problem">
+          {% if section.settings.problem1_icon %}
+            {{ section.settings.problem1_icon | image_url: width: 100 | image_tag: 
+              class: 'problem-icon',
+              alt: section.settings.problem1_title
+            }}
+          {% endif %}
+          <div class="problem-title">{{ section.settings.problem1_title }}</div>
+        </div>
+        
+        <div class="problem">
+          {% if section.settings.problem2_icon %}
+            {{ section.settings.problem2_icon | image_url: width: 100 | image_tag: 
+              class: 'problem-icon',
+              alt: section.settings.problem2_title
+            }}
+          {% endif %}
+          <div class="problem-title">{{ section.settings.problem2_title }}</div>
+        </div>
+        
+        <div class="problem">
+          {% if section.settings.problem3_icon %}
+            {{ section.settings.problem3_icon | image_url: width: 100 | image_tag: 
+              class: 'problem-icon',
+              alt: section.settings.problem3_title
+            }}
+          {% endif %}
+          <div class="problem-title">{{ section.settings.problem3_title }}</div>
+        </div>
+      </div>
+      
+      <p class="result-text">{{ section.settings.result_text }}</p>
+      <p class="brand-statement">{{ section.settings.brand_statement }}</p>
+      
+      <div class="freedom-container">
+        <div class="freedom-heading">
+          <span class="freedom-heading-line">{{ section.settings.freedom_heading_line1 }}</span>
+          <span class="freedom-heading-line">{{ section.settings.freedom_heading_line2 }}</span>
+        </div>
+        
+        {% if section.settings.video_mp4_url %}
+          <div class="freedom-video-wrapper" id="freedomVideoWrapper">
+            {% if section.settings.video_cover_image %}
+              <div class="video-play-button" id="videoPlayButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+              {{ section.settings.video_cover_image | image_url: width: 1200 | image_tag: 
+                class: 'freedom-video',
+                id: 'videoCoverImage',
+                alt: section.settings.freedom_heading_line1
+              }}
+            {% endif %}
+            <div class="video-embed-container" {% if section.settings.video_cover_image %}style="display: none;"{% endif %} id="videoContainer">
+              <video 
+                id="customVideo"
+                class="freedom-video" 
+                src="{{ section.settings.video_mp4_url }}" 
+                {% if section.settings.autoplay %}autoplay muted{% endif %}
+                {% if section.settings.loop %}loop{% endif %}
+                playsinline
+                controls
+              ></video>
+            </div>
+          </div>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const playButton = document.getElementById('videoPlayButton');
+              const coverImage = document.getElementById('videoCoverImage');
+              const videoContainer = document.getElementById('videoContainer');
+              const video = document.getElementById('customVideo');
+              
+              if (playButton && coverImage && videoContainer && video) {
+                playButton.addEventListener('click', function() {
+                  coverImage.style.display = 'none';
+                  playButton.style.display = 'none';
+                  videoContainer.style.display = 'block';
+                  video.play();
+                });
+              }
+            });
+          </script>
+        {% elsif section.settings.freedom_video != blank %}
+          <div class="video-embed-container">
+            {% if section.settings.freedom_video.type == 'youtube' %}
+              <iframe 
+                src="https://www.youtube.com/embed/{{ section.settings.freedom_video.id }}?playsinline=1{% if section.settings.autoplay %}&autoplay=1&mute=1{% endif %}{% if section.settings.loop %}&loop=1&playlist={{ section.settings.freedom_video.id }}{% endif %}" 
+                frameborder="0" 
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            {% elsif section.settings.freedom_video.type == 'vimeo' %}
+              <iframe 
+                src="https://player.vimeo.com/video/{{ section.settings.freedom_video.id }}?playsinline=1{% if section.settings.autoplay %}&autoplay=1&muted=1{% endif %}{% if section.settings.loop %}&loop=1{% endif %}" 
+                frameborder="0" 
+                allowfullscreen
+                allow="autoplay; fullscreen; picture-in-picture"
+              ></iframe>
+            {% endif %}
+          </div>
+        {% else %}
+          {% if section.settings.video_cover_image %}
+            {{ section.settings.video_cover_image | image_url: width: 1200 | image_tag: 
+              class: 'freedom-video',
+              alt: section.settings.freedom_heading_line1
+            }}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>

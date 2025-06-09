@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "video_3MgKfy": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/4K 4-3 23.976 v15.mov",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_di9GFc": {
+      "type": "multirow",
+      "blocks": {
+        "row_zDHq9L": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "caption": "",
+            "heading": "take your next step.",
+            "text": "<p>evolve your footprint wearing zero-drop, wide toe box shoes</p>",
+            "button_label": "",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "row_WmDh89": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/4_64d70bbb-0f70-4ca9-acc4-bf8b4622ea54.jpg",
+            "caption": "",
+            "heading": "embrace your authenticity",
+            "text": "<p>step into your best self, embrace your uniqueness and show how you shine with your new fission.01</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_3i9JRd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/5_e89e84aa-3c2a-4649-935c-baad35bed4ec.jpg",
+            "caption": "",
+            "heading": "we all have greatness within",
+            "text": "<p>share with us your journey of going abstract in your barefoot shoes<br/><br/>@abstractchimp</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_zDHq9L",
+        "row_WmDh89",
+        "row_3i9JRd"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_774G4q": {
+      "type": "rich-text",
+      "blocks": {
+        "text_awR7Eb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>More Than a Brand—A Movement. </strong>Abstract Chimp isn’t just about footwear. It’s about redefining the way we move through life, embracing simplicity, resilience, and personal evolution. It’s about breaking free from convention and walking your own path. Are you ready to step into evolution?</p><p>We believe evolution is a choice. We exist to challenge the status quo, strip away the unnecessary, and reconnect people with natural movement, autonomy, and strength. Minimalist Design. Maximum Freedom.  No restrictions. No overengineering. Just pure function to enhance your every step.       </p>"
+          }
+        },
+        "button_aADBVF": {
+          "type": "button",
+          "settings": {
+            "button_label": "shop now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_awR7Eb",
+        "button_aADBVF"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_3MgKfy",
+    "multirow_di9GFc",
+    "rich_text_774G4q"
+  ]
+}

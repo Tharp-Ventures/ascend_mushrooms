@@ -1,0 +1,443 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_WE9Dar": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_V9a868": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "shop now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_V9a868"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Overused Grotesk\"; font-weight: 500;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/fission01_banner_bw_lower.jpg",
+        "image_2": "shopify://shop_images/fission01_banner_bw_lower_mobile.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card__information,.card-information {text-align: center;}",
+        "h3 {font-family: Overused Grotesk; font-size: 23px; letter-spacing: 1px; font-weight: 300;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "custom_liquid_3HAMdQ": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div class=\"benefits-container contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop\" style=\"max-width:1200px; margin: 0 auto; overflow:hidden;\">\n\t<div class=\"benefits-col grid__item\">\n\t\t<h3>benefits</h3>\n\t\t<div class=\"custom-grid-container contains-content-container grid grid--1-col-tablet-down grid--3-col-desktop\" style=\"align-items: center;\">\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0805/5898/1419/files/16-Photoroom.jpg?v=1740883767\" style=\"max-width:100%;\" class=\"ac-icon-image\">\n\t\t\t</div>\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<h4>zero drop</h4>\n\t\t\t\t<p>The sole of the shoe has no drop in elevation from the heel to the toe. This is in contrast to traditional shoes, which often have a raised heel, creating a slope from the heel to the toe.</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"custom-grid-container contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop\" style=\"align-items: center;\">\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0805/5898/1419/files/15-Photoroom.jpg?v=1740883773\" style=\"max-width:100%;\" class=\"ac-icon-image\">\n\t\t\t</div>\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<h4>wide toebox</h4>\n\t\t\t\t<p>A wide toe-box allows your toes to splay freely. This increases your contact with the surface therefore allowing for a more sturdy and less- injury prone base.</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"custom-grid-container contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop\" style=\"align-items: center;\">\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0805/5898/1419/files/evolve_your_footprint.png?v=1741054619\" style=\"max-width:100%;\" class=\"ac-icon-image\">\n\t\t\t</div>\n\t\t\t<div class=\"grid__item\">\n\t\t\t\t<p>A movement for evolution—pushing health, purpose, and growth, one step at a time.</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"benefits-col grid__item\">\n\t\t<img src=\"https://cdn.shopify.com/s/files/1/0805/5898/1419/files/ac_three_shoe_image_bw.jpg?v=1741212902\" style=\"max-width:100%;\">\n\t</div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_DYANax": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mgz74H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8.png",
+            "title": "",
+            "text": "<p>True progress starts by understanding where we stand. Sometimes, looking back helps us move forward. Ignoring our foundation—our feet—means missing the first step toward balance, strength, and evolution.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ebAbJn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/11.png",
+            "title": "",
+            "text": "<p>Your feet are deeply connected to your entire body. Prioritizing foot health isn’t just about movement—it’s about balance, energy, and overall well-being. When you care for your feet, you support every system within you.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mgz74H",
+        "column_ebAbJn"
+      ],
+      "custom_css": [
+        "div {background: #e6e6e6;}",
+        "img {mix-blend-mode: multiply;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17396528441154cb72": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_3DFYKA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1300
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_3DFYKA"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_cdA34W": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "img {width: 100%; max-width: 1850px;}",
+        "div {text-align: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<img src=\"https://cdn.shopify.com/s/files/1/0805/5898/1419/files/abstract_chimp_images_mix_simple.png?v=1741304964\">",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_A7dUBU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_XTacVd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/16.png",
+            "title": "",
+            "text": "<p><strong>Zero drop: the sole of the shoe has no drop in elevation from the heel to the toe. This is in contrast to traditional shoes, which often have a raised heel, creating a slope from the heel to the toe.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QmtGtK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/15.png",
+            "title": "",
+            "text": "<p><strong>A wide toe-box allows your toes to splay freely. This increases your contact with the surface therefore allowing for a more sturdy and less- injury prone base.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_B8DRah": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/21.png",
+            "title": "",
+            "text": "<p><strong>A movement for evolution—pushing health, purpose, and growth, one step at a time.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XTacVd",
+        "column_QmtGtK",
+        "column_B8DRah"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "buy fission.01",
+        "button_link": "shopify://collections/all",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_f39Dpi": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/IMG_2307_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multirow_f4GUrV": {
+      "type": "multirow",
+      "disabled": true,
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_VpVekY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dUXqQF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8.png",
+            "title": "",
+            "text": "<p><strong>True progress starts by understanding where we stand. Sometimes, looking back helps us move forward. Ignoring our foundation—our feet—means missing the first step toward balance, strength, and evolution</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3p4V7E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/11.png",
+            "title": "",
+            "text": "<p><strong>Your feet are deeply connected to your entire body. Prioritizing foot health isn’t just about movement—it’s about balance, energy, and overall well-being. When you care for your feet, you support every system within you.</strong></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_dUXqQF",
+        "column_3p4V7E"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_FTm7YG": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_hVJXwP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>EVOLVE YOUR FOOTPRINT</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "heading_k76qin": {
+          "type": "heading",
+          "settings": {
+            "heading": "fission.01",
+            "heading_size": "h1"
+          }
+        },
+        "button_Aznqyz": {
+          "type": "button",
+          "settings": {
+            "button_label": "shop now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "text_hVJXwP",
+        "heading_k76qin",
+        "button_Aznqyz"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Overused Grotesk\"; font-weight: 00;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/abstract_chimp_fussion_colors_3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_nETwBN": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_r9E4Dp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/718194de-cea8-4c69-8d93-cba4db2c1331.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zX6wTA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/e40a40b8-1875-4e67-8b47-929b3c54dd35_Large_d83a2a6f-2190-49f7-b93d-5028af8cbcb2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hn3HKb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cbb963a1-b8b1-4f17-98b9-8dfb336ff7b1_Large_1ab1658c-7e3b-4ff6-b679-ce40f70110c3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TXkfEQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/05df2b2e-d6ad-480b-8c14-4bea89ea5d49_Large_0a1ebfd3-718b-44ac-8922-89446ea02206.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_r9E4Dp",
+        "column_zX6wTA",
+        "column_hn3HKb",
+        "column_TXkfEQ"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Overused Grotesk\"; font-weight: 500; text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "title": "@abstractchimp",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_WE9Dar",
+    "featured_collection",
+    "custom_liquid_3HAMdQ",
+    "multicolumn_DYANax",
+    "17396528441154cb72",
+    "custom_liquid_cdA34W",
+    "multicolumn_A7dUBU",
+    "image_banner_f39Dpi",
+    "multirow_f4GUrV",
+    "multicolumn_VpVekY",
+    "image_with_text_FTm7YG",
+    "multicolumn_nETwBN"
+  ]
+}

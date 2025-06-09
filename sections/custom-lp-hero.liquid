@@ -1,0 +1,428 @@
+{% schema %}
+  {
+    "name": "Custom LP Hero",
+    "tag": "section",
+    "class": "section custom-lp-hero-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image (with shoes)"
+      },
+      {
+        "type": "range",
+        "id": "content_position",
+        "label": "Content vertical position",
+        "min": 10,
+        "max": 90,
+        "step": 5,
+        "unit": "%",
+        "default": 30
+      },
+      {
+        "type": "text",
+        "id": "rating_text",
+        "label": "Rating Text",
+        "default": "100+ of happy feet"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "reboot your life from the shoe up"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "built on the principles that drove human evolution, fission.01 helps you move and feel like you were designed to."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "feature1_icon",
+        "label": "Feature 1 Icon"
+      },
+      {
+        "type": "text",
+        "id": "feature1_title",
+        "label": "Feature 1 Title",
+        "default": "Zero Drop"
+      },
+      {
+        "type": "text",
+        "id": "feature1_text",
+        "label": "Feature 1 Text",
+        "default": "full-body strength & alignment"
+      },
+      {
+        "type": "image_picker",
+        "id": "feature2_icon",
+        "label": "Feature 2 Icon"
+      },
+      {
+        "type": "text",
+        "id": "feature2_title",
+        "label": "Feature 2 Title",
+        "default": "Wide toe box"
+      },
+      {
+        "type": "text",
+        "id": "feature2_text",
+        "label": "Feature 2 Text",
+        "default": "foot freedom, finally"
+      },
+      {
+        "type": "image_picker",
+        "id": "feature3_icon",
+        "label": "Feature 3 Icon"
+      },
+      {
+        "type": "text",
+        "id": "feature3_title",
+        "label": "Feature 3 Title",
+        "default": "Maximum style"
+      },
+      {
+        "type": "text",
+        "id": "feature3_text",
+        "label": "Feature 3 Text",
+        "default": "minimal branding"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom LP Hero",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  <style>
+  .custom-lp-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .custom-lp-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .custom-lp-hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .custom-lp-hero-content {
+    width: 60%;
+    max-width: 600px;
+    padding: 0;
+    margin-top: 80px;
+  }
+  
+  .rating-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .rating-stars {
+    display: flex;
+    color: #5E8E5A;
+    margin-right: 10px;
+  }
+  
+  .star {
+    color: #5E8E5A;
+  }
+  
+  .rating-text {
+    color: #5E8E5A;
+    font-size: 16px;
+  }
+  
+  .hero-heading {
+    font-size: 72px;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #333;
+    margin: 0 0 20px 0;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .features {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #000;
+    padding: 0 20px;
+    width: 33.333%;
+  }
+  
+  .feature:first-child {
+    padding-left: 0;
+  }
+  
+  .feature:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #333;
+  }
+  
+  .shop-now-btn {
+    display: inline-block;
+    background-color: #5E8E5A;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    max-width: 260px;
+    width: 100%;
+  }
+  
+  .shipping-info {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .shipping-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 14px;
+    color: rgba(53, 106, 82, 1);
+  }
+  
+  .shipping-icon {
+    margin-right: 8px;
+  }
+  
+  @media screen and (max-width: 989px) {
+    .custom-lp-hero-content {
+      width: 80%;
+    }
+    
+    .hero-heading {
+      font-size: 48px;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .custom-lp-hero-section {
+      height: auto;
+      min-height: 100vh;
+    }
+    
+    .custom-lp-hero-container {
+      padding: 60px 20px;
+      align-items: center;
+    }
+    
+    .custom-lp-hero-content {
+      width: 100%;
+    }
+    
+    .hero-heading {
+      font-size: 36px;
+    }
+    
+    .features {
+      flex-direction: column;
+    }
+    
+    .feature {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding: 15px 0;
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
+    }
+    
+    .feature:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-icon {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+    
+    .shipping-info {
+      flex-direction: column;
+    }
+    
+    .shipping-item {
+      margin-bottom: 10px;
+    }
+  }
+  </style>
+  
+  <div class="custom-lp-hero-section">
+    {% if section.settings.background_image %}
+      {{ section.settings.background_image | image_url: width: 2000 | image_tag: 
+        class: 'custom-lp-hero-bg',
+        loading: 'eager',
+        alt: section.settings.heading
+      }}
+    {% else %}
+      <div class="custom-lp-hero-bg" style="background-color: #9ecbec;"></div>
+    {% endif %}
+    
+    <div class="custom-lp-hero-container" style="align-items: {{ section.settings.content_position | default: 30 }}%;">
+      <div class="custom-lp-hero-content">
+        <div class="rating-wrapper">
+          <div class="rating-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="rating-text">{{ section.settings.rating_text }}</span>
+        </div>
+        
+        <h1 class="hero-heading">{{ section.settings.heading }}</h1>
+        <p class="hero-description">{{ section.settings.description }}</p>
+        
+        <div class="features">
+          <div class="feature">
+            {% if section.settings.feature1_icon %}
+              {{ section.settings.feature1_icon | image_url: width: 100 | image_tag: 
+                class: 'feature-icon',
+                alt: section.settings.feature1_title
+              }}
+            {% else %}
+              <img src="{{ 'vitruvian-man.png' | asset_url }}" alt="Zero Drop" class="feature-icon">
+            {% endif %}
+            <div class="feature-title">{{ section.settings.feature1_title }}</div>
+            <div class="feature-text">{{ section.settings.feature1_text }}</div>
+          </div>
+          
+          <div class="feature">
+            {% if section.settings.feature2_icon %}
+              {{ section.settings.feature2_icon | image_url: width: 100 | image_tag: 
+                class: 'feature-icon',
+                alt: section.settings.feature2_title
+              }}
+            {% else %}
+              <img src="{{ 'foot-icon.png' | asset_url }}" alt="Wide toe box" class="feature-icon">
+            {% endif %}
+            <div class="feature-title">{{ section.settings.feature2_title }}</div>
+            <div class="feature-text">{{ section.settings.feature2_text }}</div>
+          </div>
+          
+          <div class="feature">
+            {% if section.settings.feature3_icon %}
+              {{ section.settings.feature3_icon | image_url: width: 100 | image_tag: 
+                class: 'feature-icon',
+                alt: section.settings.feature3_title
+              }}
+            {% else %}
+              <img src="{{ 'style-icon.png' | asset_url }}" alt="Maximum style" class="feature-icon">
+            {% endif %}
+            <div class="feature-title">{{ section.settings.feature3_title }}</div>
+            <div class="feature-text">{{ section.settings.feature3_text }}</div>
+          </div>
+        </div>
+        
+        <a href="{{ section.settings.button_link | default: '#' }}" class="shop-now-btn">
+          {{ section.settings.button_text }}
+        </a>
+        
+        <div class="shipping-info">
+          <div class="shipping-item">
+            <span class="shipping-icon">
+              <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_134_829)">
+                <path d="M12.2877 11.3151V2.12158H1.67981V11.3151H12.2877ZM12.2877 11.3151H17.2381V7.77913L15.1165 5.65755H12.2877V11.3151ZM6.63017 13.0831C6.63017 14.0595 5.83861 14.8511 4.86218 14.8511C3.88575 14.8511 3.0942 14.0595 3.0942 13.0831C3.0942 12.1067 3.88575 11.3151 4.86218 11.3151C5.83861 11.3151 6.63017 12.1067 6.63017 13.0831ZM15.8237 13.0831C15.8237 14.0595 15.0321 14.8511 14.0557 14.8511C13.0793 14.8511 12.2877 14.0595 12.2877 13.0831C12.2877 12.1067 13.0793 11.3151 14.0557 11.3151C15.0321 11.3151 15.8237 12.1067 15.8237 13.0831Z" stroke="#356A52" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_134_829">
+                <rect width="16.9727" height="16.9727" fill="white" transform="translate(0.972656)"/>
+                </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <span>Free Shipping</span>
+          </div>
+          
+          <div class="shipping-item">
+            <span class="shipping-icon">
+              <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.51367 1.08359L5.72355 0.592691C5.65722 0.564314 5.58582 0.549683 5.51367 0.549683C5.44152 0.549683 5.37013 0.564314 5.3038 0.592691L5.51367 1.08359ZM5.51367 13.8895L5.24902 14.3527C5.32962 14.3987 5.42084 14.4229 5.51367 14.4229C5.6065 14.4229 5.69772 14.3987 5.77833 14.3527L5.51367 13.8895ZM5.30309 0.593403L0.755551 2.54204L1.17388 3.52383L5.72284 1.57448L5.30309 0.593403ZM0 3.68675V8.56724H1.06716V3.68675H0ZM2.41961 12.7363L5.24902 14.3527L5.77833 13.4264L2.94893 11.8093L2.41961 12.7363ZM5.77833 14.3527L8.60773 12.7363L8.07842 11.8093L5.24902 13.4264L5.77833 14.3527ZM11.0273 8.56653V3.68746H9.96018V8.56795L11.0273 8.56653ZM10.2732 2.54275L5.72355 0.593403L5.3038 1.57377L9.85275 3.52383L10.2732 2.54275ZM11.0273 3.68746C11.0273 3.18945 10.7307 2.73911 10.2732 2.54275L9.85275 3.52383C9.8847 3.53761 9.91191 3.56045 9.931 3.58954C9.9501 3.61862 9.96024 3.65267 9.96018 3.68746H11.0273ZM8.60773 12.7363C9.3427 12.3163 9.9536 11.7095 10.3785 10.9773C10.8034 10.2452 11.0273 9.41375 11.0273 8.56724H9.96018C9.96004 9.22553 9.78592 9.87209 9.45547 10.4414C9.12501 11.0108 8.64995 11.4826 8.07842 11.8093L8.60773 12.7363ZM0 8.56724C7.59604e-05 9.41375 0.223913 10.2452 0.648828 10.9773C1.07374 11.7095 1.68464 12.3163 2.41961 12.7363L2.94893 11.8093C2.37729 11.4826 1.90216 11.0106 1.5717 10.4411C1.24124 9.87164 1.06718 9.22494 1.06716 8.56653L0 8.56724ZM0.754128 2.54204C0.530313 2.63807 0.339577 2.79763 0.205535 3.00097C0.0714927 3.20431 3.18481e-05 3.44321 0 3.68675H1.06716C1.06716 3.61561 1.10985 3.55087 1.1753 3.52241L0.754128 2.54204Z" fill="#356A52"/>
+                <path d="M7.64804 6.06335L4.80228 8.90912L3.37939 7.48624" stroke="#356A52" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>              
+            </span>
+            <span>30-Day Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

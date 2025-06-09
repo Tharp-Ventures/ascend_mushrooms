@@ -1,0 +1,334 @@
+{% schema %}
+  {
+    "name": "Shoe Features",
+    "tag": "section",
+    "class": "section shoe-features-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image (with shoes)"
+      },
+      {
+        "type": "text",
+        "id": "small_heading",
+        "label": "Small Heading",
+        "default": "THIS IS"
+      },
+      {
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Main Heading",
+        "default": "what shoes should have always been"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "We stripped away everything your feet don't need. No heel drop. No arch interference. No toe prison. No obnoxious branding. Strong enough to train in, clean enough to wear out."
+      },
+      {
+        "type": "header",
+        "content": "Feature 1"
+      },
+      {
+        "type": "text",
+        "id": "feature1_title",
+        "label": "Title",
+        "default": "Zero Drop Sole"
+      },
+      {
+        "type": "text",
+        "id": "feature1_text",
+        "label": "Text",
+        "default": "Restore posture + natural gait"
+      },
+      {
+        "type": "header",
+        "content": "Feature 2"
+      },
+      {
+        "type": "text",
+        "id": "feature2_title",
+        "label": "Title",
+        "default": "Wide Toe Box"
+      },
+      {
+        "type": "text",
+        "id": "feature2_text",
+        "label": "Text",
+        "default": "Let your toes splay, grip, and move freely"
+      },
+      {
+        "type": "header",
+        "content": "Feature 3"
+      },
+      {
+        "type": "text",
+        "id": "feature3_title",
+        "label": "Title",
+        "default": "Flexible Sole"
+      },
+      {
+        "type": "text",
+        "id": "feature3_text",
+        "label": "Text",
+        "default": "Feel the ground, strengthen every step"
+      },
+      {
+        "type": "header",
+        "content": "Feature 4"
+      },
+      {
+        "type": "text",
+        "id": "feature4_title",
+        "label": "Title",
+        "default": "Breathable Organic Materials"
+      },
+      {
+        "type": "text",
+        "id": "feature4_text",
+        "label": "Text",
+        "default": "Stay cool, light, and dry"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Shoe Features",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  <style>
+  .shoe-features-section {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    min-height: 600px;
+  }
+  
+  .shoe-features-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .shoe-features-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .shoe-features-content {
+    width: 55%;
+    max-width: 600px;
+  }
+  
+  .small-heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .main-heading {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .features-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+  
+  .features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    min-width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .feature-content {
+    flex: 1;
+  }
+  
+  .feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .feature-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .check-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .check-circle svg {
+    width: 16px;
+    height: 16px;
+    color: #333;
+  }
+  
+  @media screen and (max-width: 989px) {
+    .shoe-features-content {
+      width: 70%;
+    }
+  
+    .main-heading {
+      font-size: 42px;
+    }
+    
+    .features-list {
+      gap: 25px 30px;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .shoe-features-section {
+      padding: 60px 0;
+    }
+    
+    .shoe-features-content {
+      width: 100%;
+    }
+  
+    .main-heading {
+      font-size: 34px;
+    }
+  
+    .features-description {
+      font-size: 16px;
+    }
+  
+    .features-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .feature-title {
+      font-size: 18px;
+    }
+  }
+  </style>
+  
+  <div class="shoe-features-section">
+    {% if section.settings.background_image %}
+      {{ section.settings.background_image | image_url: width: 2000 | image_tag: 
+        class: 'shoe-features-bg',
+        loading: 'lazy',
+        alt: section.settings.main_heading
+      }}
+    {% endif %}
+    
+    <div class="shoe-features-container">
+      <div class="shoe-features-content">
+        <div class="small-heading">{{ section.settings.small_heading }}</div>
+        <h2 class="main-heading">{{ section.settings.main_heading }}</h2>
+        <div class="features-description">{{ section.settings.description }}</div>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <div class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12L10 17L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-title">{{ section.settings.feature1_title }}</div>
+              <div class="feature-text">{{ section.settings.feature1_text }}</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <div class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12L10 17L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-title">{{ section.settings.feature2_title }}</div>
+              <div class="feature-text">{{ section.settings.feature2_text }}</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <div class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12L10 17L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-title">{{ section.settings.feature3_title }}</div>
+              <div class="feature-text">{{ section.settings.feature3_text }}</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <div class="check-circle">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12L10 17L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-title">{{ section.settings.feature4_title }}</div>
+              <div class="feature-text">{{ section.settings.feature4_text }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
