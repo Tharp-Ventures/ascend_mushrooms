@@ -1,545 +1,344 @@
-{% schema %}
-  {
-    "name": "Shoe Comparison",
-    "tag": "section",
-    "class": "section shoe-comparison-section",
-    "settings": [
-      {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color",
-        "default": "#f8f8f8"
-      },
-      {
-        "type": "text",
-        "id": "heading_text",
-        "label": "Heading First Part",
-        "default": "the difference is"
-      },
-      {
-        "type": "text",
-        "id": "heading_highlight",
-        "label": "Heading Highlighted Part",
-        "default": "night and day"
-      },
-      {
-        "type": "text",
-        "id": "heading_suffix",
-        "label": "Heading Last Part",
-        "default": "with abstract chimp shoes"
-      },
-      {
-        "type": "color",
-        "id": "highlight_color",
-        "label": "Highlight Text Color",
-        "default": "#5E8E5A"
-      },
-      {
-        "type": "header",
-        "content": "Labels and Images"
-      },
-      {
-        "type": "text",
-        "id": "left_label",
-        "label": "Left Label",
-        "default": "THEM"
-      },
-      {
-        "type": "text",
-        "id": "left_title",
-        "label": "Left Title",
-        "default": "TRADITIONAL SHOES"
-      },
-      {
-        "type": "text",
-        "id": "right_label",
-        "label": "Right Label",
-        "default": "US"
-      },
-      {
-        "type": "text",
-        "id": "right_title",
-        "label": "Right Title",
-        "default": "ABSTRACT CHIMP"
-      },
-      {
-        "type": "image_picker",
-        "id": "comparison_image",
-        "label": "Comparison Image (with both soles and VS)"
-      },
-      {
-        "type": "header",
-        "content": "Comparison Points - Left"
-      },
-      {
-        "type": "text",
-        "id": "compare1_left",
-        "label": "Traditional Point 1",
-        "default": "elevated heel"
-      },
-      {
-        "type": "text",
-        "id": "compare1_left_result",
-        "label": "Traditional Result 1",
-        "default": "misaligned posture"
-      },
-      {
-        "type": "text",
-        "id": "compare2_left",
-        "label": "Traditional Point 2",
-        "default": "arch support"
-      },
-      {
-        "type": "text",
-        "id": "compare2_left_result",
-        "label": "Traditional Result 2",
-        "default": "weakened feet"
-      },
-      {
-        "type": "text",
-        "id": "compare3_left",
-        "label": "Traditional Point 3",
-        "default": "narrow toe box"
-      },
-      {
-        "type": "text",
-        "id": "compare3_left_result",
-        "label": "Traditional Result 3",
-        "default": "foot deformity"
-      },
-      {
-        "type": "text",
-        "id": "compare4_left",
-        "label": "Traditional Point 4",
-        "default": "rigid sole"
-      },
-      {
-        "type": "text",
-        "id": "compare4_left_result",
-        "label": "Traditional Result 4",
-        "default": "no ground feedback"
-      },
-      {
-        "type": "text",
-        "id": "compare5_left",
-        "label": "Traditional Point 5",
-        "default": "heavy & restrictive"
-      },
-      {
-        "type": "text",
-        "id": "compare5_left_result",
-        "label": "Traditional Result 5",
-        "default": "none"
-      },
-      {
-        "type": "header",
-        "content": "Comparison Points - Right"
-      },
-      {
-        "type": "text",
-        "id": "compare1_right",
-        "label": "Abstract Chimp Point 1",
-        "default": "zero drop"
-      },
-      {
-        "type": "text",
-        "id": "compare1_right_result",
-        "label": "Abstract Chimp Result 1",
-        "default": "natural alignment"
-      },
-      {
-        "type": "text",
-        "id": "compare2_right",
-        "label": "Abstract Chimp Point 2",
-        "default": "no arch support"
-      },
-      {
-        "type": "text",
-        "id": "compare2_right_result",
-        "label": "Abstract Chimp Result 2",
-        "default": "stronger muscles"
-      },
-      {
-        "type": "text",
-        "id": "compare3_right",
-        "label": "Abstract Chimp Point 3",
-        "default": "wide toe box"
-      },
-      {
-        "type": "text",
-        "id": "compare3_right_result",
-        "label": "Abstract Chimp Result 3",
-        "default": "happy, functional toes"
-      },
-      {
-        "type": "text",
-        "id": "compare4_right",
-        "label": "Abstract Chimp Point 4",
-        "default": "flexible minimal sole"
-      },
-      {
-        "type": "text",
-        "id": "compare4_right_result",
-        "label": "Abstract Chimp Result 4",
-        "default": "proprioception"
-      },
-      {
-        "type": "text",
-        "id": "compare5_right",
-        "label": "Abstract Chimp Point 5",
-        "default": "lightweight freedom"
-      },
-      {
-        "type": "text",
-        "id": "compare5_right_result",
-        "label": "Abstract Chimp Result 5",
-        "default": "none"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Shoe Comparison",
-        "category": "Custom"
-      }
-    ]
-  }
-  {% endschema %}
-  
-  <style>
-  .shoe-comparison-section {
-    padding: 80px 0;
-    background-color: {{ section.settings.background_color }};
-  }
-  
-  .comparison-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .comparison-heading {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  
-  .heading-text {
-    font-size: 38px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: #333;
+<style>
+  .shoe-comp-body {
     margin: 0;
-  }
-  
-  .heading-highlight {
-    color: {{ section.settings.highlight_color }};
-  }
-  
-  .comparison-main {
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: rgba(245, 244, 246, 1);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative;
+    min-height: 100vh;
   }
-  
-  .comparison-image-row {
+
+  .shoe-comp-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .shoe-comp-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 50px;
+    line-height: 1.2;
+  }
+
+  .shoe-comp-highlight {
+    color: #5cb85c;
+  }
+
+  .shoe-comp-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  .shoe-comp-section {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shoe-comp-header {
+    margin-bottom: 30px;
+    margin-top: 40px;
     width: 100%;
-    margin: 40px 0 30px;
-    position: relative;
   }
-  
-  .comparison-image {
-    max-width: 600px;
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  .left-labels {
-    width: 25%;
+
+  .shoe-comp-left .shoe-comp-header {
     text-align: right;
-    padding-right: 20px;
-    margin-top: 20px;
   }
-  
-  .right-labels {
-    width: 25%;
+
+  .shoe-comp-right .shoe-comp-header {
     text-align: left;
-    padding-left: 20px;
-    margin-top: 20px;
   }
-  
-  .label-text {
-    color: {{ section.settings.highlight_color }};
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  
-  .title-text {
-    font-size: 21px;
-    font-weight: 700;
-    color: #333;
+
+  .shoe-comp-label {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #5cb85c;
+    font-weight: 400;
     text-transform: uppercase;
   }
-  
-  .left-features,
-  .right-features {
+
+  .shoe-comp-type {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2c2c2c;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .shoe-comp-features {
+    text-align: left;
     width: 100%;
-    max-width: 1000px;
-    margin-top: 20px;
-    position: relative;
   }
-  
-  .feature-row {
+
+  .shoe-comp-left .shoe-comp-features {
+    margin-left: auto;
+  }
+
+  .shoe-comp-right .shoe-comp-features {
+    margin-right: auto;
+  }
+
+  .shoe-comp-row {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #333;
   }
-  
-  .left-feature-row {
-    padding-left: 5%;
-    padding-right: 55%;
-    justify-content: flex-start;
+
+  .shoe-comp-row:last-child {
+    margin-bottom: 0;
   }
-  
-  .right-feature-row {
-    padding-right: 5%;
-    padding-left: 55%;
+
+  .shoe-comp-left .shoe-comp-row {
     justify-content: flex-end;
   }
-  
-  .feature-result {
-    font-size: 16px;
-    line-height: 1.2;
-    color: #333;
+
+  .shoe-comp-right .shoe-comp-row {
+    justify-content: flex-start;
   }
-  
-  .left-feature-result {
-    text-align: right;
-    margin-right: 10px;
-    width: 170px;
+
+  .shoe-comp-text {
+    white-space: nowrap;
   }
-  
-  .right-feature-result {
-    text-align: left;
-    margin-left: 10px;
-    width: 170px;
+
+  .shoe-comp-arrow {
+    color: #999;
+    margin: 0 12px;
+    font-size: 18px;
   }
-  
-  .feature-line {
-    height: 1px;
-    background-color: #999;
+
+  .shoe-comp-negative {
+    color: #666;
+  }
+
+  .shoe-comp-positive {
+    color: #2c2c2c;
+    font-weight: 500;
+  }
+
+  .shoe-comp-image-container {
     position: relative;
-    flex-grow: 1;
-    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin: 0 20px;
+    padding-top: 15px;
   }
-  
-  .left-arrow {
-    display: none;
+
+  .shoe-comp-image {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
   }
-  
-  .right-arrow {
-    display: none;
-  }
-  
-  .feature-name {
-    font-size: 16px;
-    line-height: 1.2;
-    color: #333;
-  }
-  
-  .left-feature-name {
-    text-align: left;
-    margin-left: 10px;
-    width: 150px;
-  }
-  
-  .right-feature-name {
-    text-align: right;
-    margin-right: 10px;
-    width: 150px;
-  }
-  
-  @media screen and (max-width: 989px) {
-    .heading-text {
-      font-size: 32px;
-    }
-    
-    .left-feature-row {
-      padding-right: 50%;
-    }
-    
-    .right-feature-row {
-      padding-left: 50%;
-    }
-    
-    .feature-result, 
-    .feature-name {
-      font-size: 15px;
-    }
-    
-    .left-feature-result,
-    .right-feature-result {
-      width: 150px;
-    }
-    
-    .left-feature-name,
-    .right-feature-name {
-      width: 130px;
-    }
-  }
-  
-  @media screen and (max-width: 749px) {
-    .shoe-comparison-section {
-      padding: 40px 0;
-    }
-    
-    .comparison-heading {
-      margin-bottom: 40px;
-    }
-    
-    .heading-text {
-      font-size: 26px;
-    }
-    
-    .comparison-image-row {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .left-labels,
-    .right-labels {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-      margin-bottom: 20px;
-    }
-    
-    .comparison-image {
-      width: 80%;
-      order: 3;
-    }
-    
-    .left-feature-row,
-    .right-feature-row {
-      padding: 0;
-      justify-content: space-between;
-      max-width: 350px;
-      margin: 0 auto;
-    }
-    
-    .left-feature-result,
-    .right-feature-result,
-    .left-feature-name,
-    .right-feature-name {
-      width: 130px;
-      font-size: 14px;
-    }
-    
-    .feature-line {
-      max-width: 50px;
-    }
-  }
-  </style>
-  
-  <div class="shoe-comparison-section">
-    <div class="comparison-container">
-      <div class="comparison-heading">
-        <h2 class="heading-text">
-          {{ section.settings.heading_text }} <span class="heading-highlight">{{ section.settings.heading_highlight }}</span><br>
-          {{ section.settings.heading_suffix }}
-        </h2>
-      </div>
-      
-      <div class="comparison-main">
-        <div class="comparison-image-row">
-          <div class="left-labels">
-            <div class="label-text">{{ section.settings.left_label }}</div>
-            <div class="title-text">{{ section.settings.left_title }}</div>
-          </div>
-          
-          <div class="comparison-image">
-            {% if section.settings.comparison_image %}
-              {{ section.settings.comparison_image | image_url: width: 800 | image_tag: 
-                loading: 'lazy',
-                alt: 'Shoe comparison'
-              }}
+</style>
+
+<div class="shoe-comp-body">
+  <div class="shoe-comp-container">
+    <h1 class="shoe-comp-heading">
+      the difference is <span class="shoe-comp-highlight">night and day</span><br>
+      with abstract chimp shoes
+    </h1>
+
+    <div class="shoe-comp-wrapper">
+      <div class="shoe-comp-section shoe-comp-left">
+        <div class="shoe-comp-header">
+          <div class="shoe-comp-label">THEM</div>
+          <div class="shoe-comp-type">TRADITIONAL<br>SHOES</div>
+        </div>
+
+        <div class="shoe-comp-features">
+          {% for block in section.blocks %}
+            {% if block.settings.side == 'left' %}
+              <div class="shoe-comp-row">
+                {% if block.settings.detail != blank %}
+                  <span class="shoe-comp-text shoe-comp-negative">{{ block.settings.main }}</span>
+                  <span class="shoe-comp-arrow">←</span>
+                  <span class="shoe-comp-text shoe-comp-negative">{{ block.settings.detail }}</span>
+                {% else %}
+                  <span class="shoe-comp-text shoe-comp-negative">{{ block.settings.main }}</span>
+                {% endif %}
+              </div>
             {% endif %}
-          </div>
-          
-          <div class="right-labels">
-            <div class="label-text">{{ section.settings.right_label }}</div>
-            <div class="title-text">{{ section.settings.right_title }}</div>
-          </div>
+          {% endfor %}
         </div>
-        
-        <div class="left-features">
-          <div class="feature-row left-feature-row">
-            <div class="feature-result left-feature-result">{{ section.settings.compare1_left_result }}</div>
-            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
-            <div class="feature-name left-feature-name">{{ section.settings.compare1_left }}</div>
-          </div>
-          
-          <div class="feature-row left-feature-row">
-            <div class="feature-result left-feature-result">{{ section.settings.compare2_left_result }}</div>
-            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
-            <div class="feature-name left-feature-name">{{ section.settings.compare2_left }}</div>
-          </div>
-          
-          <div class="feature-row left-feature-row">
-            <div class="feature-result left-feature-result">{{ section.settings.compare3_left_result }}</div>
-            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
-            <div class="feature-name left-feature-name">{{ section.settings.compare3_left }}</div>
-          </div>
-          
-          <div class="feature-row left-feature-row">
-            <div class="feature-result left-feature-result">{{ section.settings.compare4_left_result }}</div>
-            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
-            <div class="feature-name left-feature-name">{{ section.settings.compare4_left }}</div>
-          </div>
-          
-          <div class="feature-row left-feature-row">
-            <div class="feature-result left-feature-result">{% if section.settings.compare5_left_result != 'none' %}{{ section.settings.compare5_left_result }}{% endif %}</div>
-            <div class="feature-line left-feature-line"><div class="left-arrow"></div></div>
-            <div class="feature-name left-feature-name">{{ section.settings.compare5_left }}</div>
-          </div>
+      </div>
+
+      <div class="shoe-comp-image-container">
+        {% if section.settings.comparison_image != blank %}
+          <img
+            src="{{ section.settings.comparison_image | image_url: width: 800 }}"
+            alt="Shoe comparison"
+            class="shoe-comp-image">
+        {% else %}
+          <img
+            src="https://i.ibb.co/ZRBh4JjG/vs2.png"
+            alt="Shoe comparison"
+            class="shoe-comp-image">
+        {% endif %}
+      </div>
+
+      <div class="shoe-comp-section shoe-comp-right">
+        <div class="shoe-comp-header">
+          <div class="shoe-comp-label">US</div>
+          <div class="shoe-comp-type">ABSTRACT<br>CHIMP</div>
         </div>
-        
-        <div class="right-features">
-          <div class="feature-row right-feature-row">
-            <div class="feature-name right-feature-name">{{ section.settings.compare1_right }}</div>
-            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
-            <div class="feature-result right-feature-result">{{ section.settings.compare1_right_result }}</div>
-          </div>
-          
-          <div class="feature-row right-feature-row">
-            <div class="feature-name right-feature-name">{{ section.settings.compare2_right }}</div>
-            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
-            <div class="feature-result right-feature-result">{{ section.settings.compare2_right_result }}</div>
-          </div>
-          
-          <div class="feature-row right-feature-row">
-            <div class="feature-name right-feature-name">{{ section.settings.compare3_right }}</div>
-            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
-            <div class="feature-result right-feature-result">{{ section.settings.compare3_right_result }}</div>
-          </div>
-          
-          <div class="feature-row right-feature-row">
-            <div class="feature-name right-feature-name">{{ section.settings.compare4_right }}</div>
-            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
-            <div class="feature-result right-feature-result">{{ section.settings.compare4_right_result }}</div>
-          </div>
-          
-          <div class="feature-row right-feature-row">
-            <div class="feature-name right-feature-name">{{ section.settings.compare5_right }}</div>
-            <div class="feature-line right-feature-line"><div class="right-arrow"></div></div>
-            <div class="feature-result right-feature-result">{% if section.settings.compare5_right_result != 'none' %}{{ section.settings.compare5_right_result }}{% endif %}</div>
-          </div>
+
+        <div class="shoe-comp-features">
+          {% for block in section.blocks %}
+            {% if block.settings.side == 'right' %}
+              <div class="shoe-comp-row">
+                {% if block.settings.detail != blank %}
+                  <span class="shoe-comp-text shoe-comp-positive">{{ block.settings.detail }}</span>
+                  <span class="shoe-comp-arrow">→</span>
+                  <span class="shoe-comp-text shoe-comp-positive">{{ block.settings.main }}</span>
+                {% else %}
+                  <span class="shoe-comp-text shoe-comp-positive">{{ block.settings.main }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shoe Comparison",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "comparison_image",
+      "label": "Comparison Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_row",
+      "name": "Feature Row",
+      "settings": [
+        {
+          "type": "select",
+          "id": "side",
+          "label": "Side",
+          "options": [
+            { "value": "left", "label": "Left (Traditional Shoes)" },
+            { "value": "right", "label": "Right (Abstract Chimp)" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "main",
+          "label": "Main Text",
+          "default": "Example feature"
+        },
+        {
+          "type": "text",
+          "id": "detail",
+          "label": "Supporting Text (optional)",
+          "default": "-"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shoe Comparison",
+      "blocks": [
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "left",
+            "main": "misaligned posture",
+            "detail": "elevated heel"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "left",
+            "main": "weakened feet",
+            "detail": "arch support"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "left",
+            "main": "foot deformity",
+            "detail": "narrow toe box"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "left",
+            "main": "no ground feedback",
+            "detail": "rigid sole"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "left",
+            "main": "heavy & restrictive"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "right",
+            "main": "natural alignment",
+            "detail": "zero drop"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "right",
+            "main": "stronger muscles",
+            "detail": "no arch support"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "right",
+            "main": "happy, functional toes",
+            "detail": "wide toe box"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "right",
+            "main": "proprioception",
+            "detail": "flexible minimal sole"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "side": "right",
+            "main": "lightweight freedom"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
